@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root{
-  --bg:#071218;
-  --panel:#0d1b24;
-  --panel2:#0e2230;
-  --line:rgba(120,150,170,.18);
-  --text:#e6eef5;
-  --muted:#b7c6d6;
-  --cyan:#1fb6ff;
-  --cyan2:#22d3ee;
-  --green:#34d399;
-  --amber:#fbbf24;
-  --shadow: 0 18px 60px rgba(2,12,20,.45);
+  --bg:#f6f1ea;
+  --panel:#ffffff;
+  --panel2:#f8f4ef;
+  --line:rgba(35,45,60,.12);
+  --text:#1f2937;
+  --muted:#5f6b7a;
+  --cyan:#2a9d8f;
+  --cyan2:#e76f51;
+  --green:#6aa84f;
+  --amber:#f4a261;
+  --shadow: 0 18px 40px rgba(31,41,55,.12);
 }
 
 *{box-sizing:border-box}
@@ -20,9 +20,10 @@ body{
   margin:0;
   font-family:"Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:
-    radial-gradient(1200px 600px at 15% 12%, rgba(34,211,238,.14), transparent 55%),
-    radial-gradient(900px 520px at 85% 10%, rgba(251,191,36,.10), transparent 60%),
-    radial-gradient(900px 700px at 20% 80%, rgba(34,197,94,.08), transparent 60%),
+    radial-gradient(1200px 600px at 12% 8%, rgba(42,157,143,.15), transparent 55%),
+    radial-gradient(900px 520px at 85% 12%, rgba(231,111,81,.16), transparent 60%),
+    radial-gradient(900px 700px at 20% 85%, rgba(244,162,97,.12), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.85), rgba(246,241,234,.85)),
     var(--bg);
   color:var(--text);
 }
@@ -42,7 +43,7 @@ a{color:inherit;text-decoration:none}
 
 .nav{
   position:sticky; top:0; z-index:50;
-  background: rgba(5,10,20,.72);
+  background: rgba(255,255,255,.86);
   backdrop-filter: blur(12px);
   border-bottom:1px solid var(--line);
 }
@@ -56,8 +57,8 @@ a{color:inherit;text-decoration:none}
 }
 .brand-dot{
   width:12px; height:12px; border-radius:50%;
-  background: var(--cyan);
-  box-shadow: 0 0 18px rgba(34,211,238,.7);
+  background: var(--cyan2);
+  box-shadow: 0 0 12px rgba(231,111,81,.35);
 }
 .nav-links{
   display:none;
@@ -80,13 +81,13 @@ a{color:inherit;text-decoration:none}
 }
 .btn:hover{transform: translateY(-1px)}
 .btn-primary{
-  background: linear-gradient(90deg, rgba(34,211,238,1), rgba(31,182,255,1));
-  color:#051620;
+  background: linear-gradient(120deg, rgba(42,157,143,1), rgba(244,162,97,1));
+  color:#13231f;
   border-color: transparent;
-  box-shadow: 0 12px 30px rgba(34,211,238,.18);
+  box-shadow: 0 12px 28px rgba(42,157,143,.22);
 }
 .btn-ghost{
-  background: rgba(11,18,32,.55);
+  background: rgba(255,255,255,.8);
 }
 .wide{width:100%; margin-top:14px}
 
@@ -108,16 +109,16 @@ a{color:inherit;text-decoration:none}
   display:inline-flex; align-items:center; gap:10px;
   padding:10px 14px;
   border-radius:999px;
-  border:1px solid rgba(34,211,238,.22);
-  background: rgba(11,18,32,.55);
-  color: rgba(34,211,238,.95);
+  border:1px solid rgba(42,157,143,.25);
+  background: rgba(255,255,255,.9);
+  color: rgba(42,157,143,.95);
   font-weight:800;
   margin-bottom:18px;
 }
 .pill .dot{
   width:10px; height:10px; border-radius:50%;
   background: var(--green);
-  box-shadow: 0 0 16px rgba(34,197,94,.6);
+  box-shadow: 0 0 10px rgba(106,168,79,.35);
 }
 
 .hero-title{
@@ -131,11 +132,11 @@ a{color:inherit;text-decoration:none}
   margin-top:10px;
   display:flex; align-items:center; gap:10px;
   font-weight:900;
-  color: rgba(229,231,235,.90);
+  color: rgba(31,41,55,.85);
 }
-.prompt{color: rgba(148,163,184,.9)}
+.prompt{color: rgba(95,107,122,.9)}
 .caret{
-  width:10px; height:22px; background: rgba(34,211,238,.85);
+  width:10px; height:22px; background: rgba(42,157,143,.85);
   display:inline-block;
   border-radius:2px;
   animation: blink 1s infinite;
@@ -144,7 +145,7 @@ a{color:inherit;text-decoration:none}
 
 .hero-desc{
   margin-top:16px;
-  color: rgba(229,231,235,.94);
+  color: rgba(31,41,55,.86);
   font-size: 16.5px;
   line-height:1.7;
   max-width: 54ch;
@@ -157,12 +158,12 @@ a{color:inherit;text-decoration:none}
   width:44px; height:44px;
   border-radius:14px;
   display:grid; place-items:center;
-  background: rgba(11,18,32,.55);
+  background: rgba(255,255,255,.9);
   border:1px solid var(--line);
-  color: rgba(229,231,235,.9);
+  color: rgba(31,41,55,.9);
   font-weight:900;
 }
-.icon-btn:hover{border-color: rgba(34,211,238,.35)}
+.icon-btn:hover{border-color: rgba(42,157,143,.35)}
 
 .hero-right{
   display:flex;
@@ -171,7 +172,7 @@ a{color:inherit;text-decoration:none}
 }
 
 .analytics-board{
-  background: rgba(13,27,36,.75);
+  background: rgba(255,255,255,.92);
   border:1px solid var(--line);
   border-radius:22px;
   box-shadow: var(--shadow);
@@ -193,8 +194,8 @@ a{color:inherit;text-decoration:none}
   border-radius:999px;
   font-size:12px;
   font-weight:800;
-  color:#032029;
-  background: linear-gradient(120deg, rgba(34,211,238,.95), rgba(251,191,36,.9));
+  color:#14302a;
+  background: linear-gradient(120deg, rgba(42,157,143,.95), rgba(244,162,97,.9));
 }
 .board-grid{
   display:grid;
@@ -205,7 +206,7 @@ a{color:inherit;text-decoration:none}
   .board-grid{grid-template-columns: 1fr 1fr}
 }
 .chart-card{
-  background: rgba(14,34,48,.7);
+  background: rgba(248,244,239,.95);
   border:1px solid var(--line);
   border-radius:18px;
   padding:14px;
@@ -228,8 +229,8 @@ a{color:inherit;text-decoration:none}
   flex:1;
   height:var(--h);
   border-radius:10px 10px 6px 6px;
-  background: linear-gradient(180deg, rgba(34,211,238,.95), rgba(34,211,238,.25));
-  box-shadow: 0 10px 20px rgba(34,211,238,.12);
+  background: linear-gradient(180deg, rgba(42,157,143,.95), rgba(42,157,143,.2));
+  box-shadow: 0 10px 20px rgba(42,157,143,.18);
 }
 .chart-donut{
   position:relative;
@@ -237,22 +238,22 @@ a{color:inherit;text-decoration:none}
   height:120px;
   margin:6px auto 10px;
   border-radius:50%;
-  background: conic-gradient(rgba(34,211,238,.95) 0 260deg, rgba(251,191,36,.9) 260deg 320deg, rgba(148,163,184,.18) 320deg 360deg);
+  background: conic-gradient(rgba(42,157,143,.95) 0 250deg, rgba(231,111,81,.9) 250deg 320deg, rgba(95,107,122,.18) 320deg 360deg);
 }
 .donut-hole{
   position:absolute;
   inset:18px;
-  background: rgba(13,27,36,.95);
+  background: rgba(255,255,255,.95);
   border-radius:50%;
-  border:1px solid rgba(34,211,238,.15);
+  border:1px solid rgba(42,157,143,.15);
 }
 .chart-line{
   position:relative;
   height:110px;
   border-radius:14px;
   background:
-    linear-gradient(0deg, rgba(120,150,170,.18) 1px, transparent 1px) 0 0/100% 22px,
-    linear-gradient(90deg, rgba(120,150,170,.12) 1px, transparent 1px) 0 0/22px 100%;
+    linear-gradient(0deg, rgba(95,107,122,.18) 1px, transparent 1px) 0 0/100% 22px,
+    linear-gradient(90deg, rgba(95,107,122,.12) 1px, transparent 1px) 0 0/22px 100%;
   overflow:hidden;
 }
 .chart-line .dot{
@@ -260,22 +261,22 @@ a{color:inherit;text-decoration:none}
   width:10px;
   height:10px;
   border-radius:50%;
-  background: rgba(34,211,238,.95);
+  background: rgba(42,157,143,.95);
   left:var(--x);
   bottom:var(--y);
   transform: translate(-50%, 50%);
-  box-shadow: 0 0 12px rgba(34,211,238,.5);
+  box-shadow: 0 0 12px rgba(42,157,143,.5);
 }
 .line-path{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(140deg, transparent 0 8%, rgba(34,211,238,.3) 8% 12%, transparent 12% 100%);
+    linear-gradient(140deg, transparent 0 8%, rgba(42,157,143,.3) 8% 12%, transparent 12% 100%);
   opacity:.6;
 }
 .chart-foot{
   margin-top:8px;
-  color: rgba(183,198,214,.95);
+  color: rgba(95,107,122,.95);
   font-size:12.5px;
   font-weight:700;
 }
@@ -320,26 +321,26 @@ a{color:inherit;text-decoration:none}
 .tag{
   padding:8px 12px;
   border-radius:999px;
-  border:1px solid rgba(34,211,238,.18);
-  background: rgba(11,18,32,.55);
-  color: rgba(229,231,235,.86);
+  border:1px solid rgba(42,157,143,.22);
+  background: rgba(255,255,255,.9);
+  color: rgba(31,41,55,.86);
   font-weight:800;
 }
 
 .scroll-hint{
   display:flex; flex-direction:column; align-items:center; gap:8px;
-  margin-top:22px; color: rgba(148,163,184,.95);
+  margin-top:22px; color: rgba(95,107,122,.95);
 }
 .arrow{
-  width:2px; height:24px; background: rgba(34,211,238,.55);
+  width:2px; height:24px; background: rgba(42,157,143,.55);
   position:relative;
 }
 .arrow:after{
   content:"";
   position:absolute; left:-4px; bottom:-6px;
   width:10px;height:10px;
-  border-right:2px solid rgba(34,211,238,.7);
-  border-bottom:2px solid rgba(34,211,238,.7);
+  border-right:2px solid rgba(42,157,143,.7);
+  border-bottom:2px solid rgba(42,157,143,.7);
   transform: rotate(45deg);
 }
 
@@ -353,21 +354,21 @@ a{color:inherit;text-decoration:none}
   display:inline-flex;
   padding:8px 12px;
   border-radius:999px;
-  border:1px solid rgba(34,211,238,.22);
-  color: rgba(34,211,238,.95);
+  border:1px solid rgba(42,157,143,.22);
+  color: rgba(42,157,143,.95);
   font-weight:900;
-  background: rgba(11,18,32,.55);
+  background: rgba(255,255,255,.9);
 }
 .section h2{
   margin:12px 0 10px;
   font-size: clamp(26px, 3.2vw, 38px);
 }
 .card{
-  background: rgba(11,18,32,.72);
+  background: rgba(255,255,255,.95);
   border:1px solid var(--line);
   border-radius:20px;
   padding:18px;
-  box-shadow: 0 10px 35px rgba(0,0,0,.25);
+  box-shadow: 0 10px 28px rgba(31,41,55,.08);
 }
 .grid-2{
   display:grid;
@@ -402,9 +403,9 @@ a{color:inherit;text-decoration:none}
 .chip{
   padding:8px 12px;
   border-radius:999px;
-  border:1px solid rgba(148,163,184,.18);
-  background: rgba(10,23,40,.55);
-  color: rgba(229,231,235,.88);
+  border:1px solid rgba(95,107,122,.18);
+  background: rgba(248,244,239,.95);
+  color: rgba(31,41,55,.88);
   font-weight:800;
   font-size: 13px;
 }
@@ -422,7 +423,7 @@ a{color:inherit;text-decoration:none}
 .bullets{
   margin:10px 0 0;
   padding-left: 18px;
-  color: rgba(184,196,210,.98);
+  color: rgba(95,107,122,.98);
 }
 .center{display:flex; justify-content:center; margin-top:18px}
 
@@ -434,15 +435,15 @@ a{color:inherit;text-decoration:none}
   padding:14px 16px;
   border-radius:18px;
   border:1px solid var(--line);
-  background: rgba(11,18,32,.72);
-  color: rgba(229,231,235,.95);
+  background: rgba(255,255,255,.95);
+  color: rgba(31,41,55,.95);
   font-weight:900;
   cursor:pointer;
 }
-.acc-btn:hover{border-color: rgba(34,211,238,.30)}
+.acc-btn:hover{border-color: rgba(42,157,143,.30)}
 .acc-icon{
   font-size: 22px;
-  color: rgba(34,211,238,.95);
+  color: rgba(42,157,143,.95);
   font-weight:900;
 }
 .acc-panel{
@@ -450,9 +451,9 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--line);
   border-top:none;
   border-radius: 0 0 18px 18px;
-  background: rgba(10,23,40,.55);
+  background: rgba(248,244,239,.95);
   padding: 14px 16px 14px 26px;
-  color: rgba(148,163,184,.95);
+  color: rgba(95,107,122,.95);
 }
 .acc-panel ul{margin:0; padding-left: 16px}
 .acc-panel p{margin:10px 0}
@@ -462,9 +463,9 @@ a{color:inherit;text-decoration:none}
   display:inline-flex; align-items:center; gap:8px;
   padding:9px 12px;
   border-radius:999px;
-  border:1px solid rgba(34,211,238,.65);
-  background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(56,189,248,.10));
-  color: rgba(229,231,235,.98);
+  border:1px solid rgba(42,157,143,.5);
+  background: linear-gradient(135deg, rgba(42,157,143,.15), rgba(244,162,97,.12));
+  color: rgba(31,41,55,.98);
   font-weight:800;
   margin-bottom:8px;
 }
@@ -473,18 +474,17 @@ a{color:inherit;text-decoration:none}
   font-size:12px;
 }
 .cert-link:hover{
-  border-color: rgba(34,211,238,.95);
-  background: linear-gradient(135deg, rgba(34,211,238,.28), rgba(56,189,248,.16));
+  border-color: rgba(42,157,143,.85);
+  background: linear-gradient(135deg, rgba(42,157,143,.28), rgba(244,162,97,.18));
 }
 
 .extra-train{margin-top:8px}
 .contact-list{display:flex; flex-direction:column; gap:10px}
-.contact-list a{color: rgba(34,211,238,.95); font-weight:800}
+.contact-list a{color: rgba(42,157,143,.95); font-weight:800}
 .contact-list a:hover{text-decoration:underline}
 
-.service-list{margin:10px 0 0; padding-left: 18px; color: rgba(148,163,184,.95)}
+.service-list{margin:10px 0 0; padding-left: 18px; color: rgba(95,107,122,.95)}
 .footer{margin-top:22px; padding: 18px 0 6px; border-top: 1px solid var(--line)}
 
 @media (prefers-reduced-motion: reduce){
   .btn,.card{transition:none}
-}
