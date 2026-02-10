@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root{
-  --bg:#050a14;
-  --panel:#0b1220;
-  --panel2:#0a1728;
-  --line:rgba(148,163,184,.14);
-  --text:#e5e7eb;
-  --muted:#b3c0d1;
-  --cyan:#22d3ee;
-  --cyan2:#38bdf8;
-  --green:#22c55e;
-  --shadow: 0 18px 60px rgba(0,0,0,.45);
+  --bg:#071218;
+  --panel:#0d1b24;
+  --panel2:#0e2230;
+  --line:rgba(120,150,170,.18);
+  --text:#e6eef5;
+  --muted:#b7c6d6;
+  --cyan:#1fb6ff;
+  --cyan2:#22d3ee;
+  --green:#34d399;
+  --amber:#fbbf24;
+  --shadow: 0 18px 60px rgba(2,12,20,.45);
 }
 
 *{box-sizing:border-box}
@@ -19,9 +20,9 @@ body{
   margin:0;
   font-family:"Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(34,211,238,.12), transparent 55%),
-    radial-gradient(900px 500px at 85% 15%, rgba(34,197,94,.10), transparent 55%),
-    radial-gradient(900px 700px at 15% 80%, rgba(56,189,248,.10), transparent 60%),
+    radial-gradient(1200px 600px at 15% 12%, rgba(34,211,238,.14), transparent 55%),
+    radial-gradient(900px 520px at 85% 10%, rgba(251,191,36,.10), transparent 60%),
+    radial-gradient(900px 700px at 20% 80%, rgba(34,197,94,.08), transparent 60%),
     var(--bg);
   color:var(--text);
 }
@@ -79,8 +80,8 @@ a{color:inherit;text-decoration:none}
 }
 .btn:hover{transform: translateY(-1px)}
 .btn-primary{
-  background: linear-gradient(90deg, rgba(34,211,238,1), rgba(56,189,248,1));
-  color:#03101a;
+  background: linear-gradient(90deg, rgba(34,211,238,1), rgba(31,182,255,1));
+  color:#051620;
   border-color: transparent;
   box-shadow: 0 12px 30px rgba(34,211,238,.18);
 }
@@ -162,6 +163,122 @@ a{color:inherit;text-decoration:none}
   font-weight:900;
 }
 .icon-btn:hover{border-color: rgba(34,211,238,.35)}
+
+.hero-right{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.analytics-board{
+  background: rgba(13,27,36,.75);
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow: var(--shadow);
+  padding:18px;
+}
+.board-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+}
+.board-title{
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.board-pill{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  color:#032029;
+  background: linear-gradient(120deg, rgba(34,211,238,.95), rgba(251,191,36,.9));
+}
+.board-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:12px;
+}
+@media (min-width: 980px){
+  .board-grid{grid-template-columns: 1fr 1fr}
+}
+.chart-card{
+  background: rgba(14,34,48,.7);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px;
+}
+.chart-card.wide{
+  grid-column: 1 / -1;
+}
+.chart-title{
+  font-weight:800;
+  font-size:14px;
+  margin-bottom:10px;
+}
+.chart-bars{
+  display:flex;
+  align-items:flex-end;
+  gap:8px;
+  height:96px;
+}
+.bar{
+  flex:1;
+  height:var(--h);
+  border-radius:10px 10px 6px 6px;
+  background: linear-gradient(180deg, rgba(34,211,238,.95), rgba(34,211,238,.25));
+  box-shadow: 0 10px 20px rgba(34,211,238,.12);
+}
+.chart-donut{
+  position:relative;
+  width:120px;
+  height:120px;
+  margin:6px auto 10px;
+  border-radius:50%;
+  background: conic-gradient(rgba(34,211,238,.95) 0 260deg, rgba(251,191,36,.9) 260deg 320deg, rgba(148,163,184,.18) 320deg 360deg);
+}
+.donut-hole{
+  position:absolute;
+  inset:18px;
+  background: rgba(13,27,36,.95);
+  border-radius:50%;
+  border:1px solid rgba(34,211,238,.15);
+}
+.chart-line{
+  position:relative;
+  height:110px;
+  border-radius:14px;
+  background:
+    linear-gradient(0deg, rgba(120,150,170,.18) 1px, transparent 1px) 0 0/100% 22px,
+    linear-gradient(90deg, rgba(120,150,170,.12) 1px, transparent 1px) 0 0/22px 100%;
+  overflow:hidden;
+}
+.chart-line .dot{
+  position:absolute;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: rgba(34,211,238,.95);
+  left:var(--x);
+  bottom:var(--y);
+  transform: translate(-50%, 50%);
+  box-shadow: 0 0 12px rgba(34,211,238,.5);
+}
+.line-path{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(140deg, transparent 0 8%, rgba(34,211,238,.3) 8% 12%, transparent 12% 100%);
+  opacity:.6;
+}
+.chart-foot{
+  margin-top:8px;
+  color: rgba(183,198,214,.95);
+  font-size:12.5px;
+  font-weight:700;
+}
 
 .terminal{
   background: rgba(11,18,32,.72);
